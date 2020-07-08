@@ -1,0 +1,35 @@
+/*
+    @Author: Bhaskar S
+    @Blog:   https://www.polarsparc.com
+    @Date:   04 Jul 2020
+ */
+
+syntax = "proto3";
+
+package com.polarsparc.protobuf3.modular;
+
+option java_outer_classname = "CustomerInfo";
+option java_multiple_files = true;
+
+enum PhoneType2 {
+  PT_UNKNOWN = 0;
+  PT_HOME = 1;
+  PT_MOBILE = 2;
+  PT_WORK = 3;
+}
+
+message PhoneNumber2 {
+  string number = 1;
+
+  PhoneType2 type = 2;
+}
+
+message Customer2 {
+  string first_name = 1;
+  string last_name = 2;
+  string email_id = 3;
+
+  int32 age = 4;
+
+  repeated PhoneNumber2 phone_no = 5;
+}

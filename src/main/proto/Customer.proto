@@ -1,0 +1,19 @@
+/*
+    @Author: Bhaskar S
+    @Blog:   https://www.polarsparc.com
+    @Date:   04 Jul 2020
+ */
+
+syntax = "proto3";
+
+package com.polarsparc.protobuf3.simple;
+
+message Customer {
+  string first_name = 1;
+  string last_name = 2;
+  string email_id = 3;
+
+  int32 age = 4;
+
+  repeated string phone_no = 5;
+}

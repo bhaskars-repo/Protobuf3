@@ -1,0 +1,29 @@
+/*
+    @Author: Bhaskar S
+    @Blog:   https://www.polarsparc.com
+    @Date:   04 Jul 2020
+ */
+
+syntax = "proto3";
+
+package com.polarsparc.protobuf3.modular;
+
+option java_outer_classname = "AccountInfo";
+option java_multiple_files = true;
+
+import "Customer2.proto";
+
+enum AccountType2 {
+  AT_UNKNOWN = 0;
+  AT_SAVINGS = 1;
+  AT_CHECKING = 2;
+  AT_BROKERAGE = 3;
+}
+
+message Account2 {
+  string acct_no = 1;
+
+  AccountType2 acct_type = 2;
+
+  Customer2 customer = 3;
+}
